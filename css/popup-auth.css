@@ -1,0 +1,193 @@
+.popup_auth {
+    background-color: #000000B2;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    transition: .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    z-index: 1000;
+}
+.popup_auth.active {
+    opacity: 1;
+    pointer-events: all;
+
+}
+.popup_auth__body {
+    width: 70%;
+    height: 60%;
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #5947ABB2;
+}
+.popup_auth__body__auth {
+    width: 300px;
+    height: 360px;
+    background-color: transparent;
+    border: 1px solid #D3D3D3;
+    border-radius: 16px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.popup_auth__body__auth__title {
+    font-size: 26px;
+    color: #F6A49C;
+    font-weight: 600;
+}
+.popup_auth__body__auth__subtitle {
+    margin-top: -10px;
+    font-size: 13px;
+    color: #F6A49C;
+    margin-bottom: 10px;
+}
+.popup_auth__body__auth__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+}
+.popup_auth__body__auth__form__input {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 16px 14px; 
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    color: #5947AB;
+}
+.popup_auth__body__auth__form__input::placeholder {
+    color: #AB9FE2;
+}
+.popup_auth__body__auth__form__button {
+    margin-top: 20px;
+    width: 110%;
+    text-align: center;
+    padding: 16px 14px;
+    border-radius: 8px;
+    border: none;
+    background-color: #FFFFFF;
+    color: #5947AB;
+    font-size: 16px;
+    font-weight: 600;
+}
+.popup_auth__body__auth__form__nubmer {
+    width: 100%;
+    position: relative;
+    padding: 16px 14px; 
+    padding-top: 22px;
+    padding-bottom: 22px;
+}
+.popup_auth__body__auth__form__nubmer__input {
+    position: absolute;
+    inset: 0;
+    padding-left: 120px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    color: #5947AB;
+}
+.popup_auth__body__auth__form__nubmer__input::placeholder {
+    color: #AB9FE2;
+    font-size: 16px;
+}
+.popup_auth__body__auth__form__nubmer__main {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 100%;
+    width: 100px;
+    padding-left: 4px;
+    z-index: 100;
+    border-right: 1.5px solid #D7D7D7;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.popup_auth__body__auth__form__nubmer__main__image {
+    width: 26px;
+    height: 26px;
+}
+.popup_auth__body__auth__form__nubmer__main__text {
+    color: #5947AB;
+    font-weight: 600;
+}
+.popup_auth__body__close {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    cursor: pointer;
+}
+.popup_auth__body__close img {
+    width: 40px;
+}
+
+@media(max-width: 860px) {
+    .popup_auth__body {
+        width: 90%;
+    }
+}
+@media(max-width: 680px) {
+    .popup_auth__body {
+        height: 70%;
+    }
+}
+@media(max-width: 600px) {
+    .popup_auth__body {
+        height: 90%;
+    }
+}
+@media(max-width: 470px) {
+    .popup_auth__body {
+        height: 94%;
+    }
+    .popup_auth__body__auth__title {
+        font-size: 22px;
+    }
+    .popup_auth__body__auth__form__input {
+        padding: 14px 13px;
+    }
+    .popup_auth__body__auth__form__nubmer__input {
+        padding-left: 90px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .popup_auth__body__auth__form__nubmer__main {
+        width: 70px;
+        padding-right: 4px;
+    }
+    .popup_auth__body__auth__form__nubmer__main__image {
+        width: 22px;
+        height: 22px;
+    }
+    .popup_auth__body__auth__form__nubmer__main__text {
+        font-size: 14px;
+    }
+}
+@media(max-width: 400px) {
+    .popup_auth__body {
+        height: 75%;
+        width: 97%;
+    }
+}

@@ -134,7 +134,7 @@ async function handleSubmit(e) {
     if (nameInput.value.trim() !== '' && emailInput.value.trim() !== '' && phoneInput.value.trim() !== '') {
 
         try {
-            const response = await axios.post('http://127.0.0.1:8000/api/user/', {
+            const response = await axios.post('https://mentorship.pythonanywhere.com/api/user/', {
                 "name": nameInput.value,
                 "email": emailInput.value,
                 "phone": phoneInput.value,

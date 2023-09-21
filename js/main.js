@@ -115,14 +115,26 @@ if(window.innerWidth <= 800) {
 
 // backend popup
 let popupAuth = document.querySelector('.popup_auth')
+let popupOpen = document.querySelector('.popup_auth_open__button')
 let popupAuthClose = document.querySelector('.popup_auth__body__close')
 let popupSubmit = document.querySelector('.popup_auth__body__auth__form__button')
 
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 buttonJoin.addEventListener('click', () => {
+    scrollToTop()
+    popupAuth.classList.add('active')
+    document.body.style.overflow = 'hidden';
+})
+popupOpen.addEventListener('click', () => {
+    scrollToTop()
+    document.body.style.overflow = 'hidden';
     popupAuth.classList.add('active')
 })
 popupAuthClose.addEventListener('click', () => {
     popupAuth.classList.remove('active')
+    document.body.style.overflow = 'auto';
 })
 
 async function handleSubmit(e) {

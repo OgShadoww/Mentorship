@@ -153,7 +153,7 @@ async function handleSubmit(e) {
             });
 
             console.log(response.data); 
-            alert("Успіх! Очкікуйте на дзвінок від менеджера.")
+            window.location.href = ' https://t.me/+660SjwfQa1BhNjUy';
 
             popupAuth.classList.remove('active');
             
@@ -170,6 +170,7 @@ async function handleSubmit(e) {
         emailInput.classList.add('error');
         phoneInput.classList.add('error');
     }
+
 }
 
 popupSubmit.addEventListener('click', handleSubmit);
